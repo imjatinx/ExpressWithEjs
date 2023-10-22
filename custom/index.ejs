@@ -1,0 +1,83 @@
+<h4>This is from index.ejs file</h4>
+
+<h5>for loop Array</h5>
+<ul>
+    <% for( let i = 0; i < fruitsArray.length; i++ ) { %>
+    <li>
+        <%= fruitsArray[i] %>
+    </li>
+    <% } %>
+</ul>
+
+<h5>for loop Object</h5>
+<table border="3" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>D.O.B</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <% for( key in profileObject ) { %>
+            <td><%= profileObject[key] %></td>
+            <% } %>
+        </tr>
+    </tbody>
+</table>
+
+<h5>for loop Array-of-Object</h5>
+<table border="3" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>D.O.B</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( profileItems in contactProfiles ) { %>
+        <tr>
+            <% for( profiles in contactProfiles[profileItems] ) { %>
+            <td><%= contactProfiles[profileItems][profiles] %></td>
+            <% } %>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+<h5>for loop Object-of-Object</h5>
+<table border="3" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>D.O.B</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for( example in objectExmaples ) { %>
+        <tr>
+            <% for( items in objectExmaples[example] ) { %>
+            <td><%= objectExmaples[example][items] %></td>
+            <% } %>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+
+<h5>if/else condition</h5>
+<% if (4<10) { %>
+<p>
+    True
+</p>
+<% } else { %>
+<p>
+    False
+</p>
+<% } %>

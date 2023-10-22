@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        table {
+            width: 100vw;
+            margin: 15px 0;
+        }
+
+        a{
+            color: white;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="background-color: blue; color: white; padding: 5px 0; display: flex; justify-content: space-around;">
+        <i>
+            navbar from layout.ejs file
+        </i>
+        <ul style="display: flex; list-style: none; color: white;">
+            <a href="/">
+                <li>
+                    HOME
+                </li>
+            </a>
+            <a href="/about">
+                <li>
+                    ABOUT
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <%- include('partials/sidebar') %>
+    <%- body %>
+    <footer style="background-color: blue; color: white; padding: 5px 0;">footer from layout.ejs file</footer>
+</body>
+
+</html>
